@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  instrument: one
+  brand: one
+  condition: one
+  name: MyString
+  listing_title: MyString
+  price: 1
+
+two:
+  user: two
+  instrument: two
+  brand: two
+  condition: two
+  name: MyString
+  listing_title: MyString
+  price: 1

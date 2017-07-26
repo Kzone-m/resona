@@ -1,0 +1,28 @@
+<header>
+  <div class="header-logo-wrapper">
+    <%= link_to "Resona", "/", class: "header-logo-link" %>
+  </div>
+  <div class="header-main-wrapper">
+    <input type="text" class="header-search-form form-control" placeholder="Fender Guitar">
+    <div class="header-main-items-wrapper">
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">カテゴリー<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "ギター", marketplaces_guitars_path %></li>
+          <li role="separator" class="divider"></li>
+          <li><%= link_to "ベース", marketplaces_basses_path %></li>
+          <li role="separator" class="divider"></li>
+          <li><%= link_to "キーボード", marketplaces_keyboards_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="header-sub-wrapper">
+    <ul class="header-sub-items-wrapper">
+      <li class="header-sub-item"><%= link_to "売る", new_sell_item_path %></li>
+      <li class="header-sub-item"><a href="#">カート</a></li>
+      <li class="header-sub-item"><%= link_to "マイページ", my_page_selling_items_path %></li>
+      <li class="header-sub-item"><a href="#">ログアウト</a></li>
+    </ul>
+  </div>
+</header>

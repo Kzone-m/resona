@@ -1,0 +1,70 @@
+.sell_items{
+  #images-label{
+    display: none;
+  }
+  #add-picture-btn-wrapper{
+    display: none;
+  }
+  #remove-btn{
+    display: none;
+  }
+  #dropzoneWrapper{
+    width: 100%;
+  }
+  #dropzoneWrapperInside{
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+  }
+  #dropzoneWrapperInside .col-sm-3{
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .file-wrapper{
+    display: block;
+    padding: 0;
+    width: 200px;
+    height: 100%;
+    border: 1px solid black;
+  }
+  #file-wrapper{
+    margin: 10px auto;
+    border: 0px;
+    height: 171px;
+    width: 121px;
+    border-radius: 5px;
+    background-image: url("/upload1.png");
+    background-size: cover;
+  }
+  .picture{
+    height: 100%;
+    width: 100%;
+  }
+  .dropzoneWrapper {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 220px;
+    margin: 10px auto;
+    border: 1px dotted black;
+  }
+  .dropzone {
+    height: 100%;
+  }
+  .ondragenter {
+    width: 100%;
+    height: 100%;
+    outline: 2px blue dotted;
+    background-color: rgba(255,255,255, 0.8);
+  }
+  .ondragenter::before {
+    position: absolute;
+    content: "画像をアップしてください";
+    top: 40%;
+    right: 25%;
+    text-align: center;
+    z-index: 10;
+    font-size: 24px;
+  }
+}

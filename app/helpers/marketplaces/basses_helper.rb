@@ -1,0 +1,2 @@
+module Marketplaces::BassesHelper
+end

@@ -1,0 +1,2 @@
+module MyPage::CartHelper
+end

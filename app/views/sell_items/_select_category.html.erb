@@ -1,0 +1,2 @@
+<%= f.label :category_id %>
+<%= f.collection_select :category_id, Category.where(instrument_id: instrument_id), :id, :name, {}, class: 'form-control'%>

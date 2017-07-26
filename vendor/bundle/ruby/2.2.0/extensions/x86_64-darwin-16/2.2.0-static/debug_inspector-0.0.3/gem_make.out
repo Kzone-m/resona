@@ -1,0 +1,15 @@
+current directory: /Users/Kazune/Desktop/rails_workspace/resona/vendor/bundle/ruby/2.2.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+/Users/Kazune/.rbenv/versions/2.2.5/bin/ruby -r ./siteconf20170722-7549-1omdkl3.rb extconf.rb
+creating Makefile
+
+current directory: /Users/Kazune/Desktop/rails_workspace/resona/vendor/bundle/ruby/2.2.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/Kazune/Desktop/rails_workspace/resona/vendor/bundle/ruby/2.2.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/Kazune/Desktop/rails_workspace/resona/vendor/bundle/ruby/2.2.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20170722-7549-v35gfi

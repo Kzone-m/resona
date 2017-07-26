@@ -1,0 +1,205 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_directory .
+ *= require_self
+ */
+
+ body{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  text-decoration: none;
+  list-style: none;
+}
+
+header{
+  height: 120px;
+  display: flex;
+}
+
+.header-logo-wrapper, .header-main-wrapper, .header-sub-wrapper{
+  display: flex;
+}
+
+.header-logo-wrapper{
+/*   background: limegreen; */
+  flex: 0 200px;
+  align-items: center;
+}
+
+.header-logo{
+  margin-left: auto;
+  display: block;
+  height: 75px;
+  width: 80%;
+}
+
+.header-logo-link {
+  margin-left: auto;
+  display: block;
+  height: 75px;
+  width: 80%;
+  color: black;
+  font-size: 48px;
+  font-family: cursive;
+}
+
+.header-main-wrapper{
+  flex: 1;
+  /* background: skyblue; */
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-main-items-wrapper{
+  margin-top: 4px;
+  margin-left: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.header-images{
+  margin: 0 4px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.header-images:hover{
+  opacity: 0.7;
+}
+
+.header-search-form{
+  margin-left: 32px;
+  display: block;
+  height: 32px;
+  width: 95%;
+}
+
+.dropdown a{
+  text-decoration: none;
+  color: skyblue;
+  font-size: 14px;
+}
+
+.dropdown:hover > .dropdown-menu{
+  display: block;
+}
+
+.header-sub-wrapper{
+  flex: 0 320px;
+  /* background: tomato; */
+  justify-content: flex-start;
+}
+
+.header-sub-items-wrapper{
+  padding: 0 32px 0 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-sub-item{
+  flex: 1;
+  margin: 1px;
+  border-right: 1px dotted skyblue;
+  text-align: center;
+}
+
+.header-sub-item a{
+  font-size: 14px;
+  color: black;
+}
+
+
+@media all and (max-width: 1000px){
+  header{
+    padding: 0;
+    height: 700px;
+    flex-direction: column;
+  }
+
+  .header-logo-wrapper{
+    flex: 200px;
+    padding: 0;
+    margin: 0;
+    height: 200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-logo{
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header-logo-link{
+
+  }
+
+  .header-main-wrapper{
+    flex: 200px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header-search-form{
+    margin: 0 5px 0 5px;
+    padding: 0;
+    width: 98%;
+    display: block;
+  }
+
+  .header-main-items-wrapper{
+    margin: 5px 0 0 5px;
+    display: flex;
+  }
+
+  .header-sub-wrapper{
+    flex: 300px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header-sub-items-wrapper{
+    padding: 0 32px 0 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-sub-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    width: 120px;
+    margin: 1px;
+    border-bottom: 3px dotted skyblue;
+    border-right: none;
+    text-align: center;
+  }
+
+  .header-sub-item a{
+    font-size: 14px;
+    color: black;
+  }
+}

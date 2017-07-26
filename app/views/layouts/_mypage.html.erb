@@ -1,0 +1,18 @@
+<div class="mypage-list-wrapper">
+  <div class="mypage-link-list-wrapper">
+    <%= link_to "売り物", my_page_selling_items_path, class: "mypage-link mypage-sell-link" %>
+    <%= link_to "ウォッチ", my_page_watch_list_index_path, class: "mypage-link mypage-watch-link" %>
+    <%= link_to "カート", my_page_cart_index_path, class: "mypage-link mypage-cart-link" %>
+  </div>
+  <div class="mypage-item-list-wrapper">
+    <% items.each do |item| %>
+    <div class="mypage-item-wrapper">
+      <%= image_tag item.images[0].picture.url, class: "mypage-item mypage-item-logo"%>
+      <p class="mypage-item mypage-item-title"><%= item.listing_title %></p>
+      <p class="mypage-item mypage-item-price"><%= item.price.to_s(:delimited, delimiter: ',')%>円</p>
+      <a href="#" class="mypage-item mypage-item-btn btn btn-warning">編集する</a>
+      <a href="#" class="mypage-item mypage-item-btn btn btn-danger">削除する</a>
+    </div>
+    <% end %>
+  </div>
+</div>

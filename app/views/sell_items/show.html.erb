@@ -1,0 +1,15 @@
+<%= stylesheet_link_tag "custom/item", :media => "all" %>
+<div class="item-detail-wrapper">
+  <div class="item-detail-main-wrapper">
+    <h2 class="item-detail-main-title"><%= @sell_item.listing_title %></h2>
+    <img src="<%= @sell_item.images[0].picture.url%>" alt="" class="item-detail-main-logo">
+    <p class="item-detail-main-info">ブランド: <%= Brand.find_by(id: @sell_item.brand_id).name %></p>
+    <p class="item-detail-main-info">カテゴリ: <%= Category.find_by(id: @sell_item.category_id).name %></p>
+    <p class="item-detail-main-info">状態: <%= Condition.find_by(id: @sell_item.condition_id).name %></p>
+  </div>
+  <div class="item-detail-sub-wrapper">
+    <p class="item-price"><%= @sell_item.price.to_s(:delimited, delimiter: ',') %>円</p>
+    <a href="#" class="btn btn-success item-detail-btn">ウォッチリストに入れる</a>
+    <%= link_to "カートに入れる", my_page_cart_index_path(sell_item_id: @sell_item.id), method: :post, class: "btn btn-primary item-detail-btn" %>
+  </div>
+</div>

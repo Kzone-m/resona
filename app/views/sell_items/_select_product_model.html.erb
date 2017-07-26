@@ -1,0 +1,2 @@
+<%= f.label :product_model_id %>
+<%= f.collection_select :product_model_id, ProductModel.where(instrument_id: instrument_id, brand_id: brand_id), :id, :name, {}, class: 'form-control' %>

@@ -1,0 +1,2 @@
+module MyPage::WatchListHelper
+end

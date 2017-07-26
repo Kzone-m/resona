@@ -1,0 +1,2 @@
+module MyPage::SellingItemsHelper
+end

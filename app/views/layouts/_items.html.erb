@@ -1,0 +1,37 @@
+<div id="items-index-wrapper" class="container-fluid">
+  <div class="row">
+    <div id="items-index-contents-wrapper" class="container">
+      <!-- side -->
+      <div id="side-wrapper" class="col-sm-3 hidden-xs">
+      </div>
+      <!-- main -->
+      <div id="main-wrapper" class="col-sm-9 col-xs-12">
+        <div class="container-fluid">
+          <div class="row">
+            <% items.each do |item| %>
+              <a href="#" class="item-link-wrapper">
+                <div class="item-wrapper col-xs-6 col-sm-4 col-md-3">
+                  <div class="item-contents">
+                    <div class="picture-wrapper">
+                      <%= image_tag item.images[0].picture.url, class: "picture" %>
+                    </div>
+                    <div class="item-infomation">
+                      <p>
+                        <small class="listing-title">
+                          <%= item.listing_title.truncate(20) %>
+                        </small><br>
+                        <span class="price">
+                          <%= item.price.to_s(:delimited, delimiter: ',') %>円
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

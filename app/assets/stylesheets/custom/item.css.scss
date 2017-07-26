@@ -1,0 +1,40 @@
+body{
+  background: white;
+}
+.item-detail-wrapper{
+  display: flex;
+  margin: 0 auto;
+  width: 900px;
+}
+.item-detail-main-wrapper{
+  flex: 0 1 600px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.item-detail-main-logo{
+  flex: 1;
+  width: 100%;
+  cursor: pointer;
+}
+.item-detail-main-logo:hover{
+  opacity: 0.9;
+}
+.item-detail-sub-wrapper{
+  flex: 0 1 300px;
+  height: 300px;
+  margin-top: 80px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: whitesmoke;
+}
+.item-price{
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+.item-detail-btn{
+  width: 220px;
+  margin-bottom: 8px;
+}

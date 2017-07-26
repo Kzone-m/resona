@@ -1,0 +1,2 @@
+module Marketplaces::GuitarsHelper
+end

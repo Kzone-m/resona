@@ -1,0 +1,63 @@
+<%= stylesheet_link_tag "custom/sell_item", :media => "all" %>
+<%= javascript_include_tag "custom/sell_items.js" %>
+
+<%= form_for(@sell_item, html:{multipart: true}) do |f| %>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="col-sm-8 col-sm-offset-2">
+      <%= f.label :listing_title %>
+      <%= f.text_field :listing_title, class: 'form-control' %>
+    </div>
+
+    <div class="col-sm-4 col-sm-offset-2">
+        <%= f.label :insturment_id %>
+        <%= f.collection_select :instrument_id, Instrument.all, :id, :name, {}, class: 'form-control' %>
+    </div>
+
+    <div class="category-area col-sm-4">
+      <%= f.label :category_id %>
+      <%= f.collection_select :category_id, Category.where(instrument_id: Instrument.first.id), :id, :name, {}, class: 'form-control'%>
+    </div>
+
+    <div class="col-sm-4 col-sm-offset-2">
+        <%= f.label :brand_id %>
+        <%= f.collection_select :brand_id, Brand.all, :id, :name, {}, class: 'form-control' %>
+    </div>
+
+    <div class="product-model-area col-sm-4">
+      <%= render partial: 'select_product_model', locals: {instrument_id: Instrument.first.id, brand_id: Brand.second.id, f: f} %>
+    </div>
+
+    <div class="col-sm-4 col-sm-offset-2">
+      <%= f.label :condition_id %>
+      <%= f.collection_select :condition_id, Condition.all, :id, :name, {}, class: 'form-control' %>
+    </div>
+
+    <div class="col-sm-4">
+      <%= f.label :price %>
+      <%= f.number_field :price, class: 'form-control' %>
+    </div>
+
+    <div class="col-sm-8 col-sm-offset-2">
+      <div id="dropzoneWrapper" class="dropzoneWrapper">
+        <%= f.label :images, id: "images-label" %>
+        <div id="dropzoneWrapperInside" class="row">
+          <%= f.fields_for :images do | image | %>
+              <%= render 'image_fields', f: image %>
+              <div id="add-picture-btn-wrapper" class="col-sm-12 text-right">
+                <%= link_to_add_association '写真追加', f, :images, class: "btn btn-primary", id: "add-picture-btn" %>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-offset-8 col-sm-2">
+      <%= f.submit "Submit", class: 'form-control'%>
+    </div>
+  </div>
+<% end %>

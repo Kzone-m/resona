@@ -1,0 +1,5 @@
+<div class="nested-fields col-sm-3 dropzone" id="dropzone">
+  <%= f.label :picture, id: "file-wrapper", class: "file-wrapper"%>
+  <%= f.file_field :picture, id: "file", style: "display:none;" %>
+  <%= link_to_remove_association "削除する", f, class:"btn btn-success", id: "remove-btn"%>
+</div>

@@ -1,0 +1,40 @@
+<%= stylesheet_link_tag "custom/index", :media => "all" %>
+<div id="intro-wrapper">
+    <a href="#"><img src="/guitar.jpg" alt="Intro" id="intro-picture"></a>
+</div>
+<div id="wrapper" class="container-fluid">
+  <div class="row">
+    <div class="main-wrapper container">
+    <!-- intro -->
+    <!-- intro_end -->
+
+    <!-- main -->
+      <div class="main col-sm-12 col-xs-12">
+        <h2 class="text-center">新着アイテム</h2>
+        <div class="container-fluid">
+            <div class="row">
+              <% @sell_items.each do | item |%>
+                <div class="col-xs-4 col-md-3 item-wrapper">
+                  <div class="picture-wrapper">
+                    <%= link_to item do %>
+                      <%= image_tag item.images[0].picture.url, class: "picture" %>
+                    <% end %>
+                  </div>
+                  <div class="item-infomation">
+                    <small class="listing-title">
+                      <%= item.listing_title.truncate(20) %>
+                    </small><br>
+                    <span class="price">
+                      <%= item.price.to_s(:delimited, delimiter: ',') %>円
+                    </span>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+            <%= link_to "もっと見る", sell_items_path, class: "btn btn-warning see-more-btn"%>
+        </div>
+      </div>
+    <!-- main_end -->
+    </div>
+  </div>
+</div>
